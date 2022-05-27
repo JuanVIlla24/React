@@ -10,7 +10,7 @@
     "id" : 1,
     "title": "task one",
     "description":"lorem",
-    "done": false
+    "done": true
 },
 {
 
