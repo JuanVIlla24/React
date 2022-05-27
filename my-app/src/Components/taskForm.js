@@ -5,7 +5,8 @@ class TaskForm extends Component{
         title: ''
     }
     onSubmit = e =>{
-        e.preventDefault();       
+        e.preventDefault();    
+        console.log(this.state)   
     }
     onChange= e =>{
         console.log(e.target.name,e.target.value)
