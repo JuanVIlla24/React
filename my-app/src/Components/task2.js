@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TaskForm from "./taskForm"
 
 
 class Task2 extends Component{
@@ -17,7 +16,6 @@ class Task2 extends Component{
       
       <button style={this.StyleCompleted()}>X</button>
       <input type="checkbox"></input>
-      <TaskForm/>
         </div>
     }
 }
