@@ -1,17 +1,23 @@
 import React, { Component } from 'react'
 
 class TaskForm extends Component{
+    state={
+        title: ''
+    }
     onSubmit = e =>{
         e.preventDefault();       
     }
     onChange= e =>{
-        console.log(e.target.value)
+        console.log(e.target.name,e.target.value)
+       this.setState({
+           [e.target.name] : e.target.value
+       })
     }
 render(){
     return(
         <div>
             <form onSubmit={this.onSubmit}>
-            <input type="text" onChange={this.onChange} className='bg-tahiti'  />
+            <input type="text" name='title' onChange={this.onChange} value={this.state.title} className=''  />
             <button type='submit' >que pedio jeje</button>
             </form>
          

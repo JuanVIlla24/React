@@ -6,7 +6,7 @@ class Task2 extends Component{
     StyleCompleted(){
         return{
             fontSize: '20 px',
-            background: this.props.e.done ? 'blue' : 'gray'
+           
         }
         
     }
