@@ -12,10 +12,10 @@ class Task2 extends Component {
     const { e } = this.props;
     return (
       <div style={this.StyleCompleted()} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
-        {e.title}
-        {e.autor}
-        {e.year}
-        {e.id}
+        {e.title} <br/>
+        {e.autor}<br/>
+        {e.year}<br/>
+        {e.id}<br/>
 
         <button
           style={this.StyleCompleted()}
