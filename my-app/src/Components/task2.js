@@ -1,22 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
+class Task2 extends Component {
+  StyleCompleted() {
+    return {
+      fontSize: "20 px",
+      color: this.props.e.done ? "black":"gray",
+      textDecoration: "none"
+    };
+  }
+  render() {
+    const { e } = this.props;
+    return (
+      <div style={this.StyleCompleted()} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+        {e.title}
+        {e.autor}
+        {e.year}
+        {e.id}
 
-class Task2 extends Component{
-    StyleCompleted(){
-        return{
-            fontSize: '20 px',
-           
-        }
-        
-    }
-    render(){
-        const {e}= this.props
-        return <div className=' pt-6 md:p-8 text-center outline-tahiti color-tahiti outline '>  
-         {e.title}      
-      
-      <button style={this.StyleCompleted()}>X</button>
-      <input type="checkbox"></input>
-        </div>
-    }
+        <button
+          style={this.StyleCompleted()}
+          onClick={this.props.deleteTask.bind(this,e.id)}
+        >
+          X
+        </button>
+        <input type="checkbox" onChange={this.props.checkDone.bind(this, e.id)}/>
+      </div>
+    );
+  }
 }
 export default Task2;
